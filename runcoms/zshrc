@@ -3,11 +3,18 @@
 #
 # Authors:
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
+#   Matt Wittmann <mcwitt@gmail.com>
 
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# Customize to your needs...
+# maybe source machine-specific zshrc
+if [[ -s ".local/zshrc" ]]; then
+  source "$HOME/.local/zshrc"
+fi
+
+# pyenv
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+

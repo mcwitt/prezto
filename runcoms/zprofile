@@ -17,8 +17,8 @@ fi
 # Editors
 #
 
-export EDITOR='nano'
-export VISUAL='nano'
+export EDITOR='vim'
+export VISUAL='vim'
 export PAGER='less'
 
 #
@@ -47,6 +47,11 @@ path=(
   $path
 )
 
+# Maybe source machine-specific zprofile
+if [[ -s ".local/zprofile" ]]; then
+  source $HOME/.local/zprofile
+fi
+
 #
 # Less
 #
@@ -72,3 +77,4 @@ if [[ ! -d "$TMPDIR" ]]; then
 fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
+
