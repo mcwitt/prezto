@@ -11,7 +11,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # maybe source machine-specific zshrc
-if [[ -s ".local/zshrc" ]]; then
+if [[ -s "$HOME/.local/zshrc" ]]; then
   source "$HOME/.local/zshrc"
 fi
 
