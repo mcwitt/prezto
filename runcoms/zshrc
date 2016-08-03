@@ -15,6 +15,9 @@ if [[ -s "$HOME/.local/zshrc" ]]; then
   source "$HOME/.local/zshrc"
 fi
 
+# user functions
+fpath=(~/.zfunctions $fpath)
+
 # pyenv
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
